@@ -14,21 +14,21 @@ const Pagination = ({ pages, currentPage }) => {
   let lastPages = false
   let startIndex = 0
   if (currentPage <= 3) {
-    startIndex = 1
-    intialPages = true
+    startIndex = 1;
+    intialPages = true;
   } else if (currentPage + 3 > pages) {
-    startIndex = pages - 4
-    lastPages = true
+    startIndex = pages - 4;
+    lastPages = true;
   } else {
     startIndex = currentPage - 2
   }
-  pageArray = [
-    startIndex,
-    startIndex + 1,
-    startIndex + 2,
-    startIndex + 3,
-    startIndex + 4,
-  ]
+  pageArray = [startIndex]
+
+  if (!isLast) {
+    pageArray = pageArray.concat([startIndex + 1, startIndex + 2, startIndex + 3, startIndex + 4]);
+  } else {
+    lastPages = true
+  }
 
   return (
     <section className="bg-light py-40">
