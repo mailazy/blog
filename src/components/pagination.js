@@ -25,7 +25,9 @@ const Pagination = ({ pages, currentPage }) => {
   pageArray = [startIndex]
 
   if (!isLast) {
-    pageArray = pageArray.concat([startIndex + 1, startIndex + 2, startIndex + 3, startIndex + 4]);
+    for (let i = 1; i !== pages; i++) {
+      pageArray = pageArray.concat([startIndex + i]);
+    }
   } else {
     lastPages = true
   }
