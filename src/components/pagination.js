@@ -35,7 +35,7 @@ const Pagination = ({ pages, currentPage }) => {
   return (
     <section className="bg-light py-40">
       <div className={styles.pagination}>
-        {!isFirst && <Link to={`/${prevPage}/#all-articles`} rel="prev" />}
+        {!isFirst && <Link to={prevPage !== "" ? `/${prevPage}/#all-articles`: "/"} rel="prev" />}
         {!intialPages && (
           <Link
             to={`/`}
@@ -54,8 +54,8 @@ const Pagination = ({ pages, currentPage }) => {
             {k}
           </Link>
         ))}
-        {!lastPages && <p>...</p>}
-        {!lastPages && (
+        {!lastPages && pages > 4 && <p>...</p>}
+        {!lastPages && pages > 4 && (
           <Link
             to={`/${pages}/#all-articles`}
             key={pages}
