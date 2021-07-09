@@ -107,12 +107,10 @@ const PinnedCard = () => {
             <section className="bg-bright-01">
               <div className="grid-66-33 cta-small">
                 <div>
-                  <h3>
-                    Free, Secure and Trusted Way to Authenticate Your Visitors
-                  </h3>
+                  <h3>Send Transactional emails With Confidence</h3>
                   <p>
-                    Add login to your website in <b>5 minutes</b> completely{" "}
-                    <b>for free</b>!
+                    Our dedicated support team works around the clock because
+                    transactional emails never stop.
                   </p>
                 </div>
                 <div className="cta-small-button">
