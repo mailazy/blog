@@ -85,6 +85,31 @@ const Post = ({ post, relatedPost }) => {
           </div>
         </div>
       </section>
+      {/* CTA section */}
+      <section className="bg-bright-01">
+        <div className="grid-66-33 cta-small">
+          <div>
+            <h3>Send Transactional emails With Confidence</h3>
+            <p>
+              Our dedicated support team works around the clock because
+              transactional emails never stop.
+            </p>
+          </div>
+          <div className="cta-small-button">
+            <p>
+              <a
+                className="btn-primary btn-white ga_event }"
+                href="https://app.mailazy.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Free Sign Up
+              </a>
+              <span>Set up in 2 minutes . No Credit Card Required</span>
+            </p>
+          </div>
+        </div>
+      </section>
       <section className={`pt-80 ${styles.postDetail}`}>
         <div>
           <div className="grid-70-30">
@@ -98,7 +123,10 @@ const Post = ({ post, relatedPost }) => {
                   <div className={styles.relatedPost}>
                     <h3>Related Posts</h3>
                     {relatedPost.map(({ node }, i) => (
-                      <div key={node.fields.slug} className={styles.relatedPostRow}>
+                      <div
+                        key={node.fields.slug}
+                        className={styles.relatedPostRow}
+                      >
                         <div className={styles.description}>
                           <h4>
                             <Link to={node.fields.slug} rel="prev">
@@ -108,8 +136,12 @@ const Post = ({ post, relatedPost }) => {
                         </div>
                         <div className={styles.tag}>
                           {node.frontmatter.tags.map(tag => (
-                            <Link key={tag} to={`/tags/${kebabCase(tag)}/`} className={`uctags`}>
-                              {tag.replace(/-/g," ")}
+                            <Link
+                              key={tag}
+                              to={`/tags/${kebabCase(tag)}/`}
+                              className={`uctags`}
+                            >
+                              {tag.replace(/-/g, " ")}
                             </Link>
                           ))}
                         </div>
@@ -122,7 +154,7 @@ const Post = ({ post, relatedPost }) => {
               <div>
                 <h3>Follow Mailazy </h3>
                 <div className={styles.followBtn}>
-                <a
+                  <a
                     href="https://twitter.com/joinMailazy"
                     onClick={() =>
                       eventLogger({
@@ -177,15 +209,27 @@ const Post = ({ post, relatedPost }) => {
               <TagMenu />
             </div>
           </div>
-		  <br/>
+          <br />
           <div className="s9-widget-wrapper"></div>
-		  <br/>
-		  <br/>
+          <br />
+          <br />
           <div className="grid-70-30">
             <div className={styles.postContent}>
               <h2>What is Mailazy?</h2>
               <p>
-			  <p>Mailazy is a Transactional Email Platform specially built for developers which satisfies the requirement for use cases like Reset Password Emails, OTP Emails, Welcome Emails, and so on. Mailazy has built to serve their customers a high value transactional email service. Sending transactional emails shouldn’t be hard with the right transaction email service. With an email service provider or simple transactional email service like Mailazy, you can easily send and track your transactional emails. Our goal is to help you achieve high delivery rates and keep your transactional emails out of the spam folder. We are always there for whenever ypu need us.</p>
+                <p>
+                  Mailazy is a Transactional Email Platform specially built for
+                  developers which satisfies the requirement for use cases like
+                  Reset Password Emails, OTP Emails, Welcome Emails, and so on.
+                  Mailazy has built to serve their customers a high value
+                  transactional email service. Sending transactional emails
+                  shouldn’t be hard with the right transaction email service.
+                  With an email service provider or simple transactional email
+                  service like Mailazy, you can easily send and track your
+                  transactional emails. Our goal is to help you achieve high
+                  delivery rates and keep your transactional emails out of the
+                  spam folder. We are always there for whenever ypu need us.
+                </p>
                 <a
                   href="https://mailazy.com/"
                   className={"btn-primary btn-cta ga_event"}

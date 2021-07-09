@@ -51,6 +51,7 @@
     "rehype-parse": "^7.0.1",
     "rehype-stringify": "^8.0.0",
     "typeface-barlow": "0.0.71",
+    "typeface-inter": "^3.18.1",
     "typography": "^0.16.19"
   },
   "devDependencies": {

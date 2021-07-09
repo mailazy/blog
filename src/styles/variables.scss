@@ -1,5 +1,5 @@
 // This file contains variables for the colour palette used throughout the site, used for backgrounds, fonts, links, buttons, etc.
-$font-stack: "Barlow", Helvetica, Arial, sans-serif;
+$font-stack: "Inter", sans-serif;
 
 // base font size
 $basefont: 18px;
@@ -8,7 +8,7 @@ $gutter: 24px;
 
 // Neutral Tones
 $white: #ffffff;
-$black: #020b13;
+$black: #212121;
 $gray-dark: #757a7e;
 $gray-darkest: #41484e;
 $gray-medium: #b3b6b8;
@@ -20,7 +20,8 @@ $warning: #f1a321;
 $error: #e61728;
 
 // brand tones
-$blue-bright: #008ecf;
+$blue-bright: #2f55d4;
+$blue-bright-dark: #2646ad;
 $blue-dark: #073857;
 $blue-darkest: #09263c;
 $blue-light: #e3f1f8;

@@ -6,7 +6,7 @@
   ul {
     padding: 0 0 0 40px;
     margin: 0 0 30px 0;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 32px;
   }
   .post-content {
@@ -48,15 +48,20 @@
         margin-bottom: 40px;
         padding-bottom: 10px;
       }
+      h4 {
+        a {
+          font-weight: 500;
+        }
+      }
     }
     .tag {
       a {
         background-color: $gray-light;
         padding: 0 16px;
-        border-radius: 4px;
+        border-radius: 30px;
         color: $black;
         line-height: 30px;
-        font-size: 16px;
+        font-size: 15px;
         height: 30px;
         display: inline-flex;
         margin-bottom: 20px;
