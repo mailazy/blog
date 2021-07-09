@@ -38,15 +38,6 @@ const Post = ({ post, relatedPost }) => {
 
   return (
     <>
-      <Helmet>
-        <script
-          id="s9-sdk"
-          async
-          defer
-          content="4b735d9693cd4a9cb7fb169cd2d50141"
-          src="//cdn.social9.com/js/socialshare.min.js"
-        ></script>
-      </Helmet>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -186,7 +177,10 @@ const Post = ({ post, relatedPost }) => {
               <TagMenu />
             </div>
           </div>
+		  <br/>
           <div className="s9-widget-wrapper"></div>
+		  <br/>
+		  <br/>
           <div className="grid-70-30">
             <div className={styles.postContent}>
               <h2>What is Mailazy?</h2>
