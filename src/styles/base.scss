@@ -345,14 +345,16 @@ button#submitsubscribe.disabled {
     }
   }
   .cta-small {
-    & > div {
-      display: inline-block;
-      float: left;
-      margin-right: 24px;
-      width: calc(67% - 12px);
-      &:last-child {
-        margin-right: 0;
-        width: calc(33% - 12px);
+    @media (min-width: 992px) {
+      & > div {
+        display: inline-block;
+        float: left;
+        margin-right: 24px;
+        width: calc(67% - 12px);
+        &:last-child {
+          margin-right: 0;
+          width: calc(33% - 12px);
+        }
       }
     }
   }
