@@ -67,6 +67,7 @@ const Layout = ({ hideTagMenu, postPage, children, pinned }) => {
                   {children}
                 </div>
               </div>
+			  <hr/>
 			  <FreeTrial />
               <Footer
                 menuLinks={data.site.siteMetadata.footerLinks}

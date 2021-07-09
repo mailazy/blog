@@ -17,8 +17,9 @@ const FreeTrial = () => {
       <div className={styles.freetrial}>
         <div className={styles.content}>
           <div className={styles.heading}>
+		  <h4>{"Send Transactional emails With Confidence"}</h4>
             <p>
-              {"Send Transactional emails With Confidence Partner with the email service trusted by developers and marketers for time-savings, scalability, and delivery expertise. Get help whenever you need it! Contact us here or just drop us a message on the live chat. Our dedicated support team works around the clock because transactional emails never stop"}
+              {"Partner with the email service trusted by developers and marketers for time-savings, scalability, and delivery expertise. Get help whenever you need it! Contact us here or just drop us a message on the live chat. Our dedicated support team works around the clock because transactional emails never stop"}
             </p>
           </div>
           <a
