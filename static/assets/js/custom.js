@@ -27,7 +27,7 @@ newsletterInterval = setInterval(function(){
 				document.getElementById('newsLetterMessage').innerHTML = "Email is Invalid.";
 			}else{
 				var newsletterURL = "https://api.social9.com/api/v1/subscribe/";
-				newsletterURL += "?email="+encodeURIComponent(email)+"&site=https%3A%2F%2Fsocial9.com%2F";
+				newsletterURL += "?email="+encodeURIComponent(email)+"&site=https%3A%2F%2Fmailazy.com%2F";
 				var xmlhttp = new XMLHttpRequest();
 				xmlhttp.open("POST", newsletterURL);
 				xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
