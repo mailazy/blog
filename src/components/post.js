@@ -164,7 +164,7 @@ const Post = ({ post, relatedPost }) => {
               <hr />
               <div>
                 <h3>Mailazy Docs</h3>
-                <p>Implement Authentication in Minutes</p>
+                <p>Integrate with Transactional email service in minutes</p>
                 <a
                   className={"btn-primary ga_event"}
                   href={"https://Mailazy.com/docs/"}
