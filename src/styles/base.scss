@@ -134,8 +134,8 @@ ul {
   max-width: 400px;
   margin: 0 auto;
   margin-top: 16px;
-  background: #f15e22;
-  color: $black;
+  /*background: #f15e22;
+  color: $black;*/
   @media (max-width: 768px) {
     max-width: 100%;
     padding: 0;
@@ -283,4 +283,12 @@ p code {
   font-size: .9em;
   color: #d73a49;
   background: #ebeef0;
+}
+#emailsubscribe{
+	float: left;
+	padding: 11px;
+	width: 325px;
+}
+button#submitsubscribe.disabled {
+    background: #2f55d47d;
 }

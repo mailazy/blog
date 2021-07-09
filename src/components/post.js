@@ -17,7 +17,7 @@ import TagMenu from "./tagMenu"
 import ReactGA from "react-ga"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import getTimeToRead from "../utils/timeToRead"
 
 const eventLogger = function ({ category, action, label }) {
@@ -82,6 +82,7 @@ const Post = ({ post, relatedPost }) => {
                 }}
               />
             </div>
+            <div className="s9-widget-wrapper"></div>
             {author && (
               <Bio
                 readingTime={getTimeToRead(post.html)}
@@ -100,24 +101,24 @@ const Post = ({ post, relatedPost }) => {
               className={styles.postContent}
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
-            <div class={styles.sidebar}>
+            <div className={styles.sidebar}>
               {relatedPost.length ? (
                 <>
-                  <div class={styles.relatedPost}>
+                  <div className={styles.relatedPost}>
                     <h3>Related Posts</h3>
                     {relatedPost.map(({ node }, i) => (
-                      <div class={styles.relatedPostRow}>
-                        <div class={styles.description}>
+                      <div key={node.fields.slug} className={styles.relatedPostRow}>
+                        <div className={styles.description}>
                           <h4>
                             <Link to={node.fields.slug} rel="prev">
                               {node.frontmatter.title}
                             </Link>
                           </h4>
                         </div>
-                        <div class={styles.tag}>
+                        <div className={styles.tag}>
                           {node.frontmatter.tags.map(tag => (
-                            <Link to={`/tags/${kebabCase(tag)}/`}>
-                              {tag}
+                            <Link key={tag} to={`/tags/${kebabCase(tag)}/`} className={`uctags`}>
+                              {tag.replace(/-/g," ")}
                             </Link>
                           ))}
                         </div>
@@ -130,8 +131,8 @@ const Post = ({ post, relatedPost }) => {
               <div>
                 <h3>Follow Mailazy </h3>
                 <div className={styles.followBtn}>
-                  <a
-                    href="https://twitter.com/mailazydotcom"
+                <a
+                    href="https://twitter.com/joinMailazy"
                     onClick={() =>
                       eventLogger({
                         category: "Social Clicks",
@@ -144,22 +145,36 @@ const Post = ({ post, relatedPost }) => {
                     <FontAwesomeIcon icon={faTwitter} title={"Twitter"} />
                     <p> on twitter </p>
                   </a>
+                  <a
+                    href="https://www.linkedin.com/company/Mailazy/"
+                    onClick={() =>
+                      eventLogger({
+                        category: "Social Clicks",
+                        action: "Clicked on LinkedIn",
+                        label: "LinkedIn",
+                      })
+                    }
+                    target="blank"
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} title={"LinkedIn"} />
+                    <p> on linkedin </p>
+                  </a>
                 </div>
               </div>
               <hr />
               <div>
                 <h3>Mailazy Docs</h3>
-                <p>Send Emails in Minutes</p>
+                <p>Implement Authentication in Minutes</p>
                 <a
                   className={"btn-primary ga_event"}
-                  href={"https://mailazy.com/docs"}
+                  href={"https://Mailazy.com/docs/"}
                   key={"docs-link"}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() =>
                     eventLogger({
                       category: "Mailazy Docs",
-                      action: "User clicked on Docs button",
+                      action: "User clicked on Mailazy Docs button",
                       label: "Docs",
                     })
                   }
@@ -171,16 +186,39 @@ const Post = ({ post, relatedPost }) => {
               <TagMenu />
             </div>
           </div>
-          <div class={`${styles.author} d-flex py-80`}>
-            <div class={styles.authorImage}>
+          <div className="s9-widget-wrapper"></div>
+          <div className="grid-70-30">
+            <div className={styles.postContent}>
+              <h2>What is Mailazy?</h2>
+              <p>
+			  <p>Mailazy is a Transactional Email Platform specially built for developers which satisfies the requirement for use cases like Reset Password Emails, OTP Emails, Welcome Emails, and so on. Mailazy has built to serve their customers a high value transactional email service. Sending transactional emails shouldn’t be hard with the right transaction email service. With an email service provider or simple transactional email service like Mailazy, you can easily send and track your transactional emails. Our goal is to help you achieve high delivery rates and keep your transactional emails out of the spam folder. We are always there for whenever ypu need us.</p>
+                <a
+                  href="https://mailazy.com/"
+                  className={"btn-primary btn-cta ga_event"}
+                  onClick={() =>
+                    eventLogger({
+                      category: "Mailazy Home",
+                      action: "User clicked on Mailazy home page",
+                      label: "Mailazy Home",
+                    })
+                  }
+                  target="blank"
+                >
+                  Lets get started!
+                </a>
+              </p>
+            </div>
+          </div>
+          <div className={`${styles.author} d-flex py-80`}>
+            <div className={styles.authorImage}>
               <img
                 className={`circle extra-large`}
                 src={githubUrl}
                 alt={author.id}
               />
             </div>
-            <div class={styles.aboutAuthor}>
-              <div class={styles.aboutAuthorInner}>
+            <div className={styles.aboutAuthor}>
+              <div className={styles.aboutAuthorInner}>
                 <h3>{author.id}</h3>
                 <p>{author.bio}</p>
                 <Link to={`/author/${_.kebabCase(author.id)}/`}>

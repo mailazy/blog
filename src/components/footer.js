@@ -11,10 +11,7 @@ const Footer = ({ menuLinks, socialLinks, postPage }) => {
         <div className={styles.lrContent}>
           <img src={logo} alt={"logo"} />
           <p>
-            Integrate and deliver in minutes with our RESTful APIs, 
-            You can integrate Mailazy in minutes with you platform. 
-            Build and monitor your email solution on a trusted foundation
-            with technical and stategic support when you need it the most.
+            Integrate and deliver in minutes with our RESTful APIs, You can integrate Mailazy in minutes with you platform. Build and monitor your email solution on a trusted foundation with technical and stategic support when you need it the most.
           </p>
           <nav className={styles.social}>
             <ul>

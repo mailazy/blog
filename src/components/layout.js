@@ -2,6 +2,7 @@ import { graphql, StaticQuery } from "gatsby"
 import React from "react"
 import Footer from "./footer"
 import Header from "./header"
+import FreeTrial from "./freeTrial"
 import layoutStyles from "./layout.module.scss"
 import favicon from "../../static/favicon.ico"
 import Helmet from "react-helmet"
@@ -66,6 +67,7 @@ const Layout = ({ hideTagMenu, postPage, children, pinned }) => {
                   {children}
                 </div>
               </div>
+			  <FreeTrial />
               <Footer
                 menuLinks={data.site.siteMetadata.footerLinks}
                 socialLinks={data.site.siteMetadata.socialLinks}
