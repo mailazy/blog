@@ -51,7 +51,7 @@ module.exports = {
 	{
       resolve: "gatsby-plugin-load-script",
       options: {
-        src: "/assets/js/custom.js",
+        src: "/blog/assets/js/custom.js",
       },
     },
     `gatsby-transformer-sharp`,
