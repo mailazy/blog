@@ -63,12 +63,10 @@ const Layout = ({ hideTagMenu, postPage, children, pinned }) => {
                 </div>
               </div>
               <div className={layoutStyles.blogContent}>
-                <div className={layoutStyles.content}>
-                  {children}
-                </div>
+                <div className={layoutStyles.content}>{children}</div>
               </div>
-			  <hr/>
-			  <FreeTrial />
+
+              <FreeTrial />
               <Footer
                 menuLinks={data.site.siteMetadata.footerLinks}
                 socialLinks={data.site.siteMetadata.socialLinks}

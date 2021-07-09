@@ -27,6 +27,14 @@
       img {
         width: 100%;
       }
+      & > div {
+        @media (min-width: 769px) {
+          height: 402px;
+        }
+        @media (max-width: 480px) {
+          height: 257px;
+        }
+      }
       a {
         & > div {
           @media (min-width: 769px) {
@@ -64,10 +72,10 @@
     a {
       background-color: $gray-light;
       padding: 0 16px;
-      border-radius: 4px;
+      border-radius: 36px;
       color: $black;
       line-height: 30px;
-      font-size: 16px;
+      font-size: 15px;
       height: 30px;
       display: inline-flex;
       margin-bottom: 20px;
@@ -84,7 +92,7 @@
     border-radius: 4px;
     color: $black;
     line-height: 30px;
-    font-size: 16px;
+    font-size: 15px;
     height: 30px;
     display: inline-flex;
     margin-bottom: 20px;
@@ -122,7 +130,7 @@
     flex-wrap: wrap;
     a {
       color: $gray-dark;
-      font-size: 16px;
+      font-size: 15px;
       position: relative;
       margin: 0;
       background: transparent;

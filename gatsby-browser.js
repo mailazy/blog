@@ -1,5 +1,5 @@
 // custom typefaces
-import "typeface-barlow"
+import "typeface-inter"
 
 import "prismjs/themes/prism.css"
 

@@ -12,12 +12,12 @@ const Bio = ({ date, author, pinned, readingTime }) => {
       <div>
         <img className={`circle large`} src={githubUrl} alt={author.id} />
       </div>
-      <div className="text ml-sm">
-        <Link to={`/author/${_.kebabCase(author.id)}/`}>
-          <strong>{author.id}</strong>
-        </Link>
-        <div className={styles.date}>{date}</div>
-        <span>{readingTime}</span>
+      <div className={`${styles.bioDetail} text ml-sm `}>
+        <Link to={`/author/${_.kebabCase(author.id)}/`}>{author.id}</Link>
+        <div className={`${styles.bioDate} d-flex`}>
+          <div className={styles.date}>{date}</div>
+          <div>{readingTime}</div>
+        </div>
       </div>
     </div>
   )

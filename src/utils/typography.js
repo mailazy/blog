@@ -1,9 +1,9 @@
 import Typography from "typography"
 
 const typography = new Typography({
-  baseFontSize: "18px",
-  headerFontFamily: ["Barlow", "Helvetica", "Arial", "sans-serif"],
-  bodyFontFamily: ["Barlow", "Helvetica", "Arial", "sans-serif"],
+  baseFontSize: "16px",
+  headerFontFamily: ["Inter", "sans-serif"],
+  bodyFontFamily: ["Inter", "sans-serif"],
   overrideThemeStyles: () => ({
     a: {
       color: "#008ecf",
@@ -14,7 +14,7 @@ const typography = new Typography({
     },
     p: {
       marginBottom: "0.75rem",
-    }
+    },
   }),
 })
 
