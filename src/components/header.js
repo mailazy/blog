@@ -1,11 +1,11 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from "react"
+import { Link } from "gatsby"
 
-import headerStyles from "./header.module.scss";
+import headerStyles from "./header.module.scss"
 
-import logo from "../../static/logo.svg";
-import Search from "./search";
-import ReactGA from "react-ga";
+import logo from "../../static/logo.svg"
+import Search from "./search"
+import ReactGA from "react-ga"
 
 const logger = function (linkName, headerLink) {
   ReactGA.event({
@@ -27,9 +27,17 @@ const Header = ({ menuLinks, searchIndex }) => {
   return (
     <>
       <div className={headerStyles.header}>
-        <Link className={logo} to={"/"}>
+        <Link className={headerStyles.logoIcon} to={"/"}>
           <img src={logo} alt={`logo`} />
         </Link>
+        <input type="checkbox" id={headerStyles.navCheck} />
+        <div className={headerStyles.navBtn}>
+          <label htmlFor="navCheck">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
         <div className={headerStyles.menuLinks}>
           <nav className={headerStyles.menuLinksinner}>
             <ul>
@@ -64,6 +72,7 @@ const Header = ({ menuLinks, searchIndex }) => {
             <Search searchIndex={searchIndex} />
           </div>
         </div>
+        <div className={headerStyles.backdrop} />
       </div>
     </>
   )
